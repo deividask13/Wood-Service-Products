@@ -1,0 +1,333 @@
+/*=============== SCSS ===============*/
+/*=============== GOOGLE FONTS / LOCAL FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*=============== BASE ===============*/
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(34, 32, 33);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+h1 {
+  font-weight: 500;
+  font-family: "kyivtype_sansregular3";
+  font-size: 5.625rem;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Inter";
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode*/
+  --main-color: #F5F5F5;
+  --secondary-color: #FFDBBB;
+  --body-color: rgb( 34, 32, 33);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --nav-font: "Montserrat";
+  --body-font: "Inter";
+  --h1-font: "kyivtype_sansregular3";
+  --h1-font-size: 5.625rem;
+  --h2-font-size: 1.875rem;
+  --body-font-size: 1.875rem;
+  /*========== Font weight ==========*/
+  --font-bold: 700;
+  --font-medium: 500;
+  --font-regular: 400;
+  --font-black: 900;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@font-face {
+  font-family: "kyivtype_sansregular3";
+  src: url("/main/fonts/kyivtypesans-regular3-webfont.woff") format("woff2"), url("/main/fonts/kyivtypesans-regular3-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.solid-woods {
+  background-color: #1E0C06;
+  width: 83.59vw;
+  height: 32.183vh;
+  right: 0;
+  position: absolute;
+  top: 130px;
+  border-radius: 14px 0 0 14px;
+  box-shadow: 0px 4px 52px rgba(245, 245, 245, 0.17);
+  box-sizing: border-box;
+}
+
+/*=============== Phone CSS ===============*/
+.wood {
+  width: 100%;
+  position: absolute;
+}
+
+.header-wrapper {
+  width: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 43px;
+  left: 19px;
+  filter: invert(98%) sepia(30%) saturate(0%) hue-rotate(72deg) brightness(114%) contrast(100%);
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  z-index: 1;
+}
+
+.header-wrapper .toggler {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  opacity: 0;
+}
+
+.nav-wrapper .hamburger {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  z-index: 1;
+  width: 60px;
+  height: 65px;
+  padding: 1rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-wrapper .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transition: all 0.4s ease-in;
+}
+
+/*=============== Styling bottom and top lines of the menu ===============*/
+.nav-wrapper .hamburger > div:before,
+.nav-wrapper .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 45%;
+  height: 4px;
+  background-color: inherit;
+  border-radius: 100px;
+  transition: 1s;
+}
+
+.nav-wrapper .hamburger > div:before {
+  left: 0;
+}
+
+.nav-wrapper .hamburger > div:after {
+  top: 10px;
+  right: 0;
+}
+
+/*=============== Animation of the hamburger ===============*/
+.header-wrapper .toggler:checked + .nav-wrapper .hamburger > div:before,
+.header-wrapper .toggler:checked + .nav-wrapper .hamburger > div:after {
+  width: 100%;
+  transition: 1s;
+}
+
+.menu-wrapper .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-wrapper .menu > div {
+  background-color: rgb(34, 32, 33);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.nav-wrapper .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.nav-wrapper .menu > div > div > ul > li {
+  list-style: none;
+  color: white;
+  font-size: var(--body-font-size);
+  font-family: var(--nav-font);
+  padding: 1rem;
+}
+
+.nav-wrapper .menu > div > div > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.4s ease;
+}
+
+/*=============== Animation for checked state ===============*/
+.header-wrapper .toggler:checked ~ .nav-wrapper .menu {
+  visibility: visible;
+}
+
+.header-wrapper .toggler:checked ~ .nav-wrapper .menu > div {
+  transform: scale(1);
+}
+
+.header-wrapper .toggler:checked ~ .nav-wrapper .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.img-responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 465px;
+  border-radius: 3px 41px 35px 0px;
+  z-index: -2;
+}
+
+.img-content {
+  position: absolute;
+  width: 100%;
+  height: 465px;
+  left: 0px;
+  top: 0px;
+  background: rgba(34, 32, 33, 0.65);
+}
+
+.solid-woods h1 {
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  font-size: var(--h1-font);
+  line-height: 107.9%;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
+
+.solid-woods h2 {
+  position: absolute;
+  top: 115px;
+  left: 20px;
+  font-size: 15px;
+  font-weight: var(--font-medium);
+  line-height: 18px;
+  width: 165px;
+}
+
+.solid-woods .btn-order {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 170px;
+  left: 20px;
+  width: 86px;
+  height: 21px;
+  background-color: #728BAD;
+  border-radius: 42px;
+}
+
+.solid-woods .btn-order a {
+  color: #F5F5F5;
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-size: 15px;
+}
+
+#staircase {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  right: 10px;
+  bottom: 50px;
+}
+
+#wooden-table {
+  position: absolute;
+  top: 375px;
+  left: 95px;
+}
+
+#person-floor {
+  position: absolute;
+  top: 440px;
+  right: 60px;
+}
+
+.divider {
+  width: 290px;
+  height: 0.55%;
+  background-color: #F5F5F5;
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+/*=============== BASE ===============*/
+html {
+    box-sizing: border-box;
+    font-size: 100%; // Acesibility purpose matches defualt font size set in the browser
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb( 34, 32, 33);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }

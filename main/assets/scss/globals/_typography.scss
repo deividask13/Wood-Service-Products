@@ -1,0 +1,24 @@
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+h1 {
+    font-weight: 500;
+    font-family: 'kyivtype_sansregular3';
+    font-size: 5.625rem;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Inter';
+    font-size: 1.875rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
