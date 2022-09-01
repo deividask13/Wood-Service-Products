@@ -23,14 +23,23 @@ img {
   height: auto;
 }
 
+label {
+  visibility: hidden;
+}
+
+::--webkit-scrollbar {
+  width: 0;
+}
+
 /*========== Font and typography ==========*/
 /*.5rem = 8px | 1rem = 16px ...*/
 h1 {
-  font-weight: 500;
+  font-weight: var(--font-bold);
   font-family: "kyivtype_sansregular3";
-  font-size: 5.625rem;
+  font-size: var(--h1-font-size);
   line-height: 1.1;
   margin-top: 0;
+  text-transform: uppercase;
 }
 
 p {
@@ -43,24 +52,17 @@ a, a:visited, a:active {
 
 body {
   font-family: "Inter";
-  font-size: 1.875rem;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: var(--font-medium);
   color: var(--main-color);
 }
 
-/*=============== VARIABLES CSS ===============*/
 :root {
-  /*========== Colors ==========*/
-  /*Color mode*/
-  --main-color: #F5F5F5;
-  --secondary-color: #FFDBBB;
-  --body-color: rgb( 34, 32, 33);
-  /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --nav-font: "Montserrat";
   --body-font: "Inter";
   --h1-font: "kyivtype_sansregular3";
-  --h1-font-size: 5.625rem;
+  --h1-font-size: 30px;
   --h2-font-size: 1.875rem;
   --body-font-size: 1.875rem;
   /*========== Font weight ==========*/
@@ -71,6 +73,15 @@ body {
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
+}
+
+/*========== Colors ==========*/
+/*Color mode*/
+:root {
+  --main-color: #F5F5F5;
+  --secondary-color: #FFDBBB;
+  --body-color: rgb( 34, 32, 33);
+  --btn-color: #728BAD;
 }
 
 @font-face {
@@ -117,10 +128,10 @@ body {
 }
 
 .header-wrapper .toggler {
-  position: absolute;
+  position: fixed;
   top: 45px;
   right: 0;
-  z-index: 2;
+  z-index: 10;
   cursor: pointer;
   width: 60px;
   height: 40px;
@@ -145,7 +156,7 @@ body {
   position: relative;
   width: 100%;
   height: 4px;
-  background-color: white;
+  background-color: var(--main-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +208,7 @@ body {
 }
 
 .nav-wrapper .menu > div {
-  background-color: rgb(34, 32, 33);
+  background-color: var(--body-color);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -218,7 +229,7 @@ body {
 
 .nav-wrapper .menu > div > div > ul > li {
   list-style: none;
-  color: white;
+  color: var(--main-color);
   font-size: var(--body-font-size);
   font-family: var(--nav-font);
   padding: 1rem;
@@ -233,6 +244,10 @@ body {
 /*=============== Animation for checked state ===============*/
 .header-wrapper .toggler:checked ~ .nav-wrapper .menu {
   visibility: visible;
+}
+
+.header-wrapper .toggler:checked ~ .nav-wrapper {
+  z-index: 3;
 }
 
 .header-wrapper .toggler:checked ~ .nav-wrapper .menu > div {
@@ -264,7 +279,6 @@ body {
 }
 
 .solid-woods h1 {
-  text-transform: uppercase;
   font-weight: var(--font-bold);
   font-size: var(--h1-font);
   line-height: 107.9%;
@@ -297,7 +311,7 @@ body {
 }
 
 .solid-woods .btn-order a {
-  color: #F5F5F5;
+  color: var(--main-color);
   text-decoration: none;
   font-family: var(--body-font);
   font-size: 15px;
@@ -326,8 +340,222 @@ body {
 .divider {
   width: 290px;
   height: 0.55%;
-  background-color: #F5F5F5;
+  background-color: var(--main-color);
   position: absolute;
   bottom: 40px;
   left: 20px;
+}
+
+.type-wood {
+  position: relative;
+  top: 620px;
+  left: 20px;
+  width: 370px;
+  z-index: 2;
+}
+
+.type-wood h1 {
+  width: 250px;
+}
+
+.media-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 45%;
+  overscroll-behavior-inline: contain;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  border: none;
+  margin-top: 15%;
+}
+
+.mid {
+  margin-top: 25%;
+}
+
+.list-group-item {
+  font-family: var(--body-font);
+  font-size: 15px;
+  margin-left: 5%;
+  font-weight: var(--font-medium);
+  color: var(--main-color);
+  border: none;
+  width: 120px;
+}
+
+.card-title {
+  font-family: var(--body-font);
+  font-size: 20px;
+  font-weight: var(--font-bold);
+  color: var(--main-color);
+}
+
+#advntg {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: -5px;
+  top: 15px;
+}
+
+.our-work {
+  position: relative;
+  top: 700px;
+}
+
+.our-work h1 {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.slider-img {
+  border-radius: 14px;
+}
+
+.advantages-us {
+  position: relative;
+  top: 820px;
+  left: 20px;
+  width: 300px;
+}
+
+.advantages-us h1 {
+  margin-bottom: 46px;
+}
+
+.advantages-us p {
+  width: 296px;
+  line-height: 21px;
+}
+
+#staircase-video {
+  position: relative;
+  margin-top: 48px;
+  left: 20px;
+}
+
+.btn-consultation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 17px;
+  gap: 10px;
+  position: absolute;
+  width: 220px;
+  height: 34px;
+  left: 66px;
+  top: 580px;
+  background: var(--btn-color);
+  border-radius: 42px;
+}
+
+.btn-consultation a {
+  color: var(--main-color);
+}
+
+.about-us {
+  background-color: #1E0C06;
+  width: 83.59vw;
+  height: 674px;
+  left: 0px;
+  position: relative;
+  top: 1000px;
+  border-radius: 0 14px 14px 0;
+  box-shadow: 0px 4px 52px rgba(245, 245, 245, 0.17);
+  box-sizing: border-box;
+}
+
+.left-wood {
+  top: 40px;
+  left: 20px;
+  position: absolute;
+}
+
+.left-wood h1 {
+  top: 12px;
+}
+
+.left-wood p {
+  width: 284px;
+}
+
+.left-wood > img {
+  position: absolute;
+}
+
+.left-wood-img-two {
+  top: 290px;
+  left: 0px;
+  border: 10px solid #1E0C06;
+  border-radius: 14px;
+  z-index: 1;
+}
+
+.left-wood-img-one {
+  top: 270px;
+  left: 180px;
+}
+
+.left-wood-img-three {
+  top: 500px;
+  left: 150px;
+}
+
+.questions {
+  position: relative;
+  top: 1060px;
+  left: 20px;
+}
+
+.questions h1 {
+  line-height: 36px;
+}
+
+.questions p {
+  width: 272px;
+}
+
+.form {
+  position: relative;
+  top: 12px;
+  left: -4px;
+}
+
+.form-btn {
+  padding-left: 16px;
+  width: 324px;
+  height: 40px;
+  border: 2px solid var(--btn-color);
+  border-radius: 42px;
+  margin-bottom: 12px;
+  background-color: transparent;
+}
+
+#question {
+  height: 134px;
+  border-radius: 14px;
+}
+
+::-moz-placeholder {
+  color: var(--main-color);
+}
+
+:-ms-input-placeholder {
+  color: var(--main-color);
+}
+
+::placeholder {
+  color: var(--main-color);
 }/*# sourceMappingURL=style.css.map */
