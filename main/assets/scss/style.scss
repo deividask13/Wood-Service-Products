@@ -163,6 +163,10 @@
   color: inherit;
   transition: color 0.4s ease;
 }
+
+.menu, .nav-wrapper {
+  height: 0;
+}
 /*=============== Animation for checked state ===============*/
 
 .header-wrapper .toggler:checked ~ .nav-wrapper .menu {
@@ -201,7 +205,7 @@
 
   background: rgba(34, 32, 33, 0.65);
 }
-
+/*=============== Main-container section ===============*/
 .solid-woods h1 {
   font-weight: var(--font-bold);
   font-size: var(--h1-font);
@@ -246,7 +250,7 @@
   width: 90px;
   height: 90px;
   position: absolute;
-  right: 10px;
+  right: 3vw;
   bottom: 50px;
 }
 
@@ -263,20 +267,20 @@
 }
 
 .divider {
-  width: 290px;
+  width: 85%;
   height: 0.55%;
   background-color: var(--main-color);
   position: absolute;
   bottom: 40px;
   left: 20px;
 }
-
+/*=============== Type-wood section ===============*/
 .type-wood {
   position: relative;
   top: 620px;
   left: 20px;
-  width: 370px;
   z-index: 2;
+  width: fit-content;
 }
 
 .type-wood h1{
@@ -334,7 +338,7 @@
   left: -5px;
   top: 15px;
 }
-
+/*=============== Our-work section ===============*/
 .our-work {
   position: relative;
   top: 700px;
@@ -348,7 +352,7 @@
 .slider-img {
   border-radius: 14px;
 }
-
+/*=============== Advantages-us secion ===============*/
 .advantages-us {
   position: relative;
   top: 820px;
@@ -390,7 +394,7 @@
 .btn-consultation a {
   color: var(--main-color);
 }
-
+/*=============== About us section ===============*/
 .about-us{
   background-color: #1E0C06;
   width: 83.590vw;
@@ -438,11 +442,12 @@
   top: 500px;
   left: 150px;
 }
-
+/*=============== Questions section ===============*/
 .questions {
   position: relative;
   top: 1060px;
   left: 20px;
+  width: 326px;
 }
 
 .questions h1 {
@@ -452,6 +457,7 @@
 .questions p {
   width: 272px;
 }
+
 .form {
   position: relative;
   top: 12px;
@@ -475,4 +481,56 @@
 
 ::placeholder {
   color: var(--main-color);
+}
+
+input[type="submit"] {
+  padding: 5px;
+
+  border: none;
+  font-family: var(--body-font);
+  font-size: 15px;
+  font-weight: var(--font-bold);
+  color: var(--main-color);
+  width: 92px;
+  height: 3.93vh;
+  position: initial;
+}
+
+footer {
+  position: absolute;
+
+  display: grid;
+  place-items: center;
+  
+
+  width: 100%;
+  min-height: 40.69vh;
+  bottom: -375vh;
+
+  background-color: #222021;
+  box-shadow: 0 -6px 52px rgba(245, 245, 245, 0.17);
+  z-index: 100;
+}
+
+footer h3 {
+  position: relative;
+  font-family: var(--nav-font);
+  font-size: 0.938rem;
+  font-weight: var(--font-medium);
+  width: 200px;
+}
+
+.footer-img {
+  position: relative;
+  padding-right: 12px;
+}
+
+.footer-text {
+  left: 36px;
+}
+
+@media only screen and (min-width: 768px) { 
+  #staircase {
+      right: 30vw;
+  }
 }
