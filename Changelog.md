@@ -14,3 +14,9 @@ All notable changes to this project will be documented in this file.
 ### Bug fixes
 
 Navbar - Hamburger menu bug was fixed, please refer to TESTING.md for more details.
+
+## Commit date 25/09/2022
+
+### Added
+- Whole code restructuring
+- Using grid layout for responsive design

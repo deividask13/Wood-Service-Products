@@ -108,8 +108,56 @@ As a [type of user], I want [an action] so that [a benefit/a value]
 ## Languages
 * HTML5
 * CSS
-## Frameworks, Software and Pre-processors
+## Frameworks, Software and Pre-processors, Libraries
 * Bootstrap 5 - As a developer I used Bootstrap because it is flexible and easy to use. Its main advantages are responsive design, wide browser compatibility, consistent design through the use of reusable components, and ease of use and quick learning.
-* SaSS - SaSS is an extension of CSS that allows you to use things like variables, nested rules, inline imports and more. It also helps organise things and allows you to create stylesheets faster. And I've decided to use SaSS through out this project.
 * Figma - Figma is a powerful design tool that helped me create the logo and design for this website. Figma is a web-based design tool with real-time collaboration. It works in web browsers and there are also native apps that you can work with offline.
+* Google Fonts - Google Fonts is a catalog of open-source fonts and icons which I've used throught out the whole website.
+* Scss - Scss is an extension of CSS that allows you to use things like variables, nested rules, inline imports and more. It also helps organise things and allows you to create stylesheets faster. And I've decided to use SaSS through out this project.
 ---
+
+# Features
+
+* Responsive design
+* Media scroller for when viewing on smaller screen sizes.
+---
+
+# Deployment
+
+## Github Pages
+
+A GitHub Pages deployment was performed using the following steps...
+
+1. Log in to [GitHub](https://github.com/) and locate the [GitHub Repository](https://github.com/deividask13/Wood-Service-Products)
+2. Locate the "Settings" button on the menu at the top of the Repository (not page)...
+3. You will find the "Pages" section at the bottom of the Settings page.
+4. Click "None" under "Source" and select "Deploy from a branch".
+5. Select "main" branch and "/(root)" folder and click "Save"
+6. You will see the page refresh automatically.
+7. At the top of the page you will be able to see "Your site is live at ...."
+8. Click "Visit site"
+
+## Forking the GitHub Repository
+
+By utilising the following methods, we may fork the GitHub Repository to create a clone of the original repository on our GitHub account so that we can access and/or edit it without changing the original repository.
+
+1. Log in to [GitHub](https://github.com/) and locate the [GitHub Repository](https://github.com/deividask13/Wood-Service-Products)
+2. Locate the "Settings" button on the menu at the top of the Repository (not page)...
+3. Locate  the "Fork" button.
+4. You should now have a copy of the original repository on your GitHub account.
+
+## Creating a local copy
+
+1. Log in to [GitHub](https://github.com/) and locate the [GitHub Repository](https://github.com/deividask13/Wood-Service-Products)
+2. Locate the "Code" button on the menu at the top of the Repository (not page)...
+3. Copy the URL under "Clone using HTTPS" to clone the repository via HTTPS.
+4. Open a terminal
+5. Navigate to the location where you want the repository to be cloned.
+6. Type ``git clone``, and then insert the URL copied in Step 3.
+```bash
+$ git clone "Link copied in Step 3 **without the quotation marks**"
+```
+7. Press Enter to continue. Your local clone has now been created.
+---
+
+# Credits
+

@@ -37,7 +37,27 @@ UX - Elements
 
 User cannot fully interact with the website because a div.menu is taking up space while hidden. I was able to partially resolve the issue using z-index. This bug was discovered while creating a horizontally scrollable media.
 
-Issue Status - Currently present <br>
+Issue Status - Fixed <br>
 Technical test report - "https://app.birdeatsbug.com/sessions/CgyDXRv1VtKHDi0EP8IIDPODEnROi-Dz5WKT7jC9PvU2"
 
-Bug resolution: N/A
+Bug resolution: While targeting .nav-wrapper give it a height of 0.
+
+---
+
+UX - Elements
+
+While viewing the website on smaller devices starting from 320px there is hidden overflow which is caused by the menu.
+
+Issue Status - Present <br>
+Technical test report - Not required.
+
+---
+
+UX - Responsiveness
+
+While developing the website I didn't follow any responsive layouts which caused major problems and elements weren't scalling when viewed on different devices.
+
+Issue Status - Fixed <br>
+Technical test report - Not required.
+
+Bug resolution - restructuring of the website from the beginning. Using grid layout so that elements scale for 4 most used viewport dimensions. (Desktop 1600x992px, Laptop 1280x802px, Tablet 768x1024px, Mobile 320x480px).
