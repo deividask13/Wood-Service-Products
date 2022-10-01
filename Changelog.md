@@ -20,3 +20,9 @@ Navbar - Hamburger menu bug was fixed, please refer to TESTING.md for more detai
 ### Added
 - Whole code restructuring
 - Using grid layout for responsive design
+
+## Commit date 01/10/2022
+
+### Added
+- Rectified issues discovered using validation service
+- Updated README.md and TESTING.md

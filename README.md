@@ -6,7 +6,7 @@ Wood Product Services is a mobile-first design with progressive advancement in m
 There are many advantages of building mobile-first design like enhanced visual
 hierarchy, improved UX, and better structure. 
 
-<insert github pages here>
+![Website](/README_Container/main.png)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/deividask13/Wood-Service-Products?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/deividask13/Wood-Service-Products?style=for-the-badge)
 
@@ -19,7 +19,7 @@ hierarchy, improved UX, and better structure.
 * [User Experience UX](#User-Experience)
   * [Initial Assessment and Evaluation](#Initial-Assessment-and-Evaluation)
   * [Essential information for the landing page](#Essential-Information-for-the-landing-page)
-  *[User Stories](#User-Stories)
+  * [User Stories](#User-Stories)
 
 * [Design and Construction](#Design-and-Construction)
   * [Colour Palette](#Colour-Palette)
@@ -31,6 +31,16 @@ hierarchy, improved UX, and better structure.
 * [Tech Stack](#Tech-Stack)
   * [Languages](#Languages)
   * [Frameworks, Software and Pre-processors](#Frameworks,-Software-and-Pre-processors)
+
+* [Deployment](#Deployment)
+  * [Github pages](#Github-Pages)
+  * [Forking the GitHub Repository](#Forking-the-GitHub-Repository)
+  * [Creating a local copy](#Creating-a-local-copy)
+
+* [Credits](#Credits)
+  * [Code Used](#Code-Used)
+  * [Media](#Media)
+  * [Acknowledgments](#Acknowledgments)
 ---
 # User Experience UX
 
@@ -161,3 +171,12 @@ $ git clone "Link copied in Step 3 **without the quotation marks**"
 
 # Credits
 
+## Code used
+* [Bootstrap Documentation for carousel](https://getbootstrap.com/docs/5.2/components/carousel/#how-it-works)
+## Media
+Images that were used in 'Our Work' section of the website were sourced from [Pexels](https://www.pexels.com/)
+## Acknowledgments
+I'd like to thank the following individuals for their assistance in finishing my first milestone project:
+* [OrgHu](https://www.orghu.com/) for helping my solve bugs with the hamburger menu.
+* [Jessica](https://github.com/thecodercoder) for introducing me to Sass and BEM which made the development of the website so much quicker and easier.
+* [Kevin Powell](https://github.com/kevin-powell) for helping me understand responsive layout better which lead to whole code restructuring.

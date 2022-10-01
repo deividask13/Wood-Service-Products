@@ -427,10 +427,6 @@ ul li {
     margin: 61px 0 31px 0;
 }
 
-.hero-left .hero-one {
-    place-items: right;
-}
-
 .hero-one, .hero-two {
     padding-right: 25px;
 }
@@ -498,8 +494,8 @@ input[type="text"], input[type="tel"], textarea {
     }
 
     .questions {
-        grid-template-columns: 1;
-        grid-template-rows: 2;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
         justify-items: center;
     }
 
